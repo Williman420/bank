@@ -1,21 +1,13 @@
 package bank;
 
 import java.util.ArrayList;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
+
 
 public class Account  { 
 
     ArrayList<String> AccountUsernameList = new ArrayList<String>();
     ArrayList<String> AccountPasswordList = new ArrayList<String>();
     ArrayList<Integer> AccountBalanceList = new ArrayList<Integer>();
-    public FileWriter writeToFile;
-    public FileReader readFromFile;
-    public BufferedWriter writeToBuffer;
-    public BufferedReader readFromBuffer;
     
 
     public void setAccUsername(String newAcc) {
@@ -50,14 +42,7 @@ public class Account  {
 
     }
 
-    public void writeToLog(String log , String message) throws IOException{
-        writeToFile = new FileWriter("C:\\Dwika\\programs\\logText\\Log.txt", true);
-        writeToBuffer = new BufferedWriter(writeToFile);
-        writeToBuffer.write(log + message);
-        writeToBuffer.newLine();
-        writeToBuffer.flush();
-
-    }
+  
 
     public static void main(String[] args) {
     }
