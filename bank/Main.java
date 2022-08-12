@@ -1,7 +1,7 @@
 package bank;
 
 import java.util.Scanner;
-import java.io.IOException;
+
 
 public class Main {
 
@@ -23,7 +23,7 @@ public class Main {
     int amountOut;
     int picAction;
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
         Main mainObj = new Main();
         Account NewObj = new Account();
 
@@ -55,7 +55,7 @@ public class Main {
                 mainObj.userPos = mainObj.userPos = NewObj.AccountUsernameList.indexOf(mainObj.userData);
                 if (NewObj.AccountUsernameList.contains(mainObj.userData)
                         && NewObj.AccountPasswordList.contains(mainObj.pswData)) {
-                    NewObj.writeToLog(mainObj.userData, " has logged in");
+  
                     while (mainObj.accStart) {
                         NewObj.clearScreen();
                         System.out.println("wellcome to your account");
@@ -128,7 +128,7 @@ public class Main {
                 System.out.println("please enter your new username here: ");
                 mainObj.NewUsernameData = newInput.next();
                 NewObj.setAccUsername(mainObj.NewUsernameData);
-                NewObj.writeToLog(mainObj.NewUsernameData, " has created a new account");
+
                 // password
                 System.out.println("put your password here");
                 mainObj.newPswData = newInput.next();
@@ -142,6 +142,6 @@ public class Main {
             }
 
         }
-        NewObj.writeToLog(mainObj.userData, " has logged out");
+
     }
 }
